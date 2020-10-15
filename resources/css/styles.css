@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: rgba(21, 21, 21, 0.867);
+    background-color: rgba(21, 21, 21, 0.800);
     color: rgb(237, 233, 225);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1em;
@@ -16,6 +16,7 @@ body {
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
+    /* border: solid 2em; RECUERDA QUE ESTO ES SOLO UNA GUIA Y SE TIENE QUE BORRAR */
 }
 
 h1, h2, h3, p, ul {
@@ -32,12 +33,12 @@ h1, h2, h3, p, ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
+    width: 100vw;
     /* position: fixed; */
     max-width: 500px;
     padding: 90px 45px 90px 90px;
     
-    background-color: salmon; /* RECUERDA QUE ESTO SE TIENEQ QUE BORRAR */
+    border-right: dotted 0.1em; /* RECUERDA QUE ESTO ES SOLO UNA GUIA Y SE TIENE QUE BORRAR */
 }
 
 #left-section-upper-container {
@@ -83,8 +84,8 @@ h1, h2, h3, p, ul {
 }
 
 .inner-outer-link {
-    /* margin-top: -6em; */
-    /* padding-top: 5.5em; */
+    margin-top: -6em;
+    padding-top: 5.5em;
     width: 100%;
 }
 
@@ -108,22 +109,60 @@ span {
 
 
 
-
-
 /* ------------------------------ EVERYTHING ON THE MIDDLE SIDE CONTAINER IS HERE ------------------------------ */
 
 #middle-section-container {
+    width: 100vw;
+    height: 100vh;
+    /* position: fixed; */
+    max-width: 500px;
+    overflow: scroll;
+
+    border-right: dotted 0.1em; /* RECUERDA QUE ESTO ES SOLO UNA GUIA Y SE TIENE QUE BORRAR */
+}
+
+#middle-section-planets-workspace {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
-    /* position: fixed; */
-    max-width: 500px;
-    padding: 90px 45px 90px 90px;
+    padding: 90px 45px;
+    box-sizing: border-box;
 
-    background-color: rosybrown; /* RECUERDA QUE ESTO SE TIENEQ QUE BORRAR */
 }
 
+#inner-planets-title-container {
+    padding-bottom: 1.5em;
+}
+
+#inner-planets-clip-board {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#outer-planets-title-container {
+    padding-top: 2.5em;
+    padding-bottom: 1.5em;
+}
+
+#outer-planets-clip-board {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.planet {
+    background-color: rgba(21, 21, 21, 0.250);
+    padding-top: 3.5em;
+    padding-bottom: 3.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    text-align: center;
+    border-radius: 0.2em;
+}
+
+.planet:hover {
+    opacity: 40%;
+    transition: all .35s ease-in-out;
+}
 
 
 
@@ -140,5 +179,4 @@ span {
     max-width: 500px;
     padding: 90px 45px 90px 90px;
 
-    background-color: springgreen; /* RECUERDA QUE ESTO SE TIENEQ QUE BORRAR */
 }
