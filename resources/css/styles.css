@@ -1,3 +1,7 @@
+/* html {
+    scroll-behavior: smooth;
+} */
+
 body {
     margin: 0;
     background-color: rgba(21, 21, 21, 0.800);
@@ -118,6 +122,8 @@ span {
     /* position: fixed; */
     max-width: 500px;
     overflow: scroll;
+    scroll-behavior: smooth;
+
 
     /* border-right: dotted 0.1em; RECUERDA QUE ESTO ES SOLO UNA GUIA Y SE TIENE QUE BORRAR */
 }
