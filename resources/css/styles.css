@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    background-color: rgba(21, 21, 21, 0.867);
+    color: rgb(237, 233, 225);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+#gigantic-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2, h3, p, ul {
+    margin: 0;
+    color: rgb(237, 233, 225);
+}
+
+
+
+
+/* ------------------------------- EVERYTHING ON THE LEFT SIDE CONTAINER IS HERE ------------------------------- */
+
+#left-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    /* position: fixed; */
+    max-width: 500px;
+    padding: 90px 45px 90px 90px;
+    
+    background-color: salmon; /* RECUERDA QUE ESTO SE TIENEQ QUE BORRAR */
+}
+
+#left-section-upper-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#solar-system-text {
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 1;
+}
+
+#solar-system-description-container {
+    line-height: 2;
+}
+
+#solar-system-description {
+    margin-top: 2em;
+}
+
+#inner-outer-navigator {
+    font-weight: 700;
+    font-size: 0.75em;
+    padding-top: 5em;
+    padding-bottom: 28em;
+    text-transform: uppercase;
+    display: block;
+}
+
+#inner-outer-ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: -1em;
+    margin-bottom: -1em;
+}
+
+.inner-outer-li {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.inner-outer-link {
+    /* margin-top: -6em; */
+    /* padding-top: 5.5em; */
+    width: 100%;
+}
+
+a {
+    color: rgb(237, 233, 225);
+    text-decoration: none;
+}
+
+.inner-outer-link:hover {
+    /* font-size: 1.1em; */
+    letter-spacing: 0.1em;
+    transition: all .35s ease-in-out;
+}
+
+span {
+    display: inline-block;
+    height: 1.5em;
+}
+
+
+
+
+
+
+
+/* ------------------------------ EVERYTHING ON THE MIDDLE SIDE CONTAINER IS HERE ------------------------------ */
+
+#middle-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    /* position: fixed; */
+    max-width: 500px;
+    padding: 90px 45px 90px 90px;
+
+    background-color: rosybrown; /* RECUERDA QUE ESTO SE TIENEQ QUE BORRAR */
+}
+
+
+
+
+
+
+/* ------------------------------ EVERYTHING ON THE RIGHT SIDE CONTAINER IS HERE ------------------------------- */
+
+#right-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    /* position: fixed; */
+    max-width: 500px;
+    padding: 90px 45px 90px 90px;
+
+    background-color: springgreen; /* RECUERDA QUE ESTO SE TIENEQ QUE BORRAR */
+}
