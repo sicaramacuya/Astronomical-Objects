@@ -13,13 +13,13 @@ body {
     width: 100vw;
     height: 100vh;
     position: relative;
-    max-width: 1500px;
+    max-width: 2000px;
     margin-left: auto;
     margin-right: auto;
     /* border: solid 2em; RECUERDA QUE ESTO ES SOLO UNA GUIA Y SE TIENE QUE BORRAR */
 }
 
-h1, h2, h3, p, ul {
+h1, h2, h3, h4, h5, h6, p, ul {
     margin: 0;
     color: rgb(237, 233, 225);
 }
@@ -38,7 +38,7 @@ h1, h2, h3, p, ul {
     max-width: 500px;
     padding: 90px 45px 90px 90px;
     
-    border-right: dotted 0.1em; /* RECUERDA QUE ESTO ES SOLO UNA GUIA Y SE TIENE QUE BORRAR */
+    /* border-right: dotted 0.1em; RECUERDA QUE ESTO ES SOLO UNA GUIA Y SE TIENE QUE BORRAR */
 }
 
 #left-section-upper-container {
@@ -48,7 +48,7 @@ h1, h2, h3, p, ul {
 
 #solar-system-text {
     font-weight: 700;
-    font-size: 3em;
+    font-size: 3.4em;
     line-height: 1;
 }
 
@@ -63,10 +63,11 @@ h1, h2, h3, p, ul {
 #inner-outer-navigator {
     font-weight: 700;
     font-size: 0.75em;
-    padding-top: 5em;
+    padding-top: 6em;
     padding-bottom: 28em;
     text-transform: uppercase;
     display: block;
+    font-size: 1em;
 }
 
 #inner-outer-ul {
@@ -118,7 +119,7 @@ span {
     max-width: 500px;
     overflow: scroll;
 
-    border-right: dotted 0.1em; /* RECUERDA QUE ESTO ES SOLO UNA GUIA Y SE TIENE QUE BORRAR */
+    /* border-right: dotted 0.1em; RECUERDA QUE ESTO ES SOLO UNA GUIA Y SE TIENE QUE BORRAR */
 }
 
 #middle-section-planets-workspace {
@@ -132,6 +133,7 @@ span {
 
 #inner-planets-title-container {
     padding-bottom: 1.5em;
+    font-size: 1.5em;
 }
 
 #inner-planets-clip-board {
@@ -142,6 +144,7 @@ span {
 #outer-planets-title-container {
     padding-top: 2.5em;
     padding-bottom: 1.5em;
+    font-size: 1.5em;
 }
 
 #outer-planets-clip-board {
@@ -156,7 +159,7 @@ span {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     text-align: center;
-    border-radius: 0.2em;
+    border-radius: 0.35em;
 }
 
 .planet:hover {
@@ -178,5 +181,105 @@ span {
     /* position: fixed; */
     max-width: 500px;
     padding: 90px 45px 90px 90px;
+    overflow: scroll;
+}
 
+img {
+    border-radius: 0.25em;
+}
+
+#right-lower-section-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#object-name {
+    font-size: 2.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1.0em;
+}
+
+#infomration-card-container {
+    background-color: rgba(21, 21, 21, 0.150);
+    border-radius: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 0em;
+    display: flex;
+    flex-direction: column;
+}
+
+#information-card-text {
+    /* background-color: seagreen; */
+    margin: 1em;
+}
+
+#quick-facts-text {
+    margin: 0;
+    font-size: 1em;
+}
+
+#information-card-clipboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 0 0 2em 2em;
+    background-color: rgba(21, 21, 21, 0.150);
+}
+
+.quick-fact {
+    background-color: rgba(21, 21, 21, 0.200);
+    margin: 0.3em;
+    width: 7.2vw;
+    height: 11vh;
+    text-align: center;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fact-header {
+    /* background-color: salmon; */
+}
+
+.fact-name {
+    font-size: 0.9vw;
+    margin: 0.1em;
+}
+
+.fact-description {
+    margin: 0;
+    font-size: 0.8vw;
+    opacity: 60%;
+}
+
+.fact-description:hover {
+    opacity: 100%;
+    transition: all .35s ease-in-out;
+}
+
+#object-description {
+    font-size: 2.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1.0em;
+}
+
+#paragraph-container {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    line-height: 2;
+    margin-top: 0em;
+    margin-bottom: 6.8em;
+    font-size: large;
+}
+
+p {
+    margin-top: 1em;
 }
