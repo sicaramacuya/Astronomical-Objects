@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    background-color: rgba(21, 21, 21, 0.800);
+    background-color: rgba(21, 21, 21, .96);
     color: rgb(237, 233, 225);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1em;
@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 #solar-system-text {
     font-weight: 700;
-    font-size: 3.4em;
+    font-size: 4vw;
     line-height: 1;
 }
 
@@ -138,8 +138,9 @@ span {
 }
 
 #inner-planets-title-container {
-    padding-bottom: 1.5em;
-    font-size: 1.5em;
+    padding-bottom: 0.35em;
+    font-size: 2.2vw;
+    line-height: 1;
 }
 
 #inner-planets-clip-board {
@@ -149,8 +150,9 @@ span {
 
 #outer-planets-title-container {
     padding-top: 2.5em;
-    padding-bottom: 1.5em;
-    font-size: 1.5em;
+    padding-bottom: 0.35em;
+    font-size: 2.2vw;
+    line-height: 1;
 }
 
 #outer-planets-clip-board {
@@ -159,7 +161,7 @@ span {
 }
 
 .planet {
-    background-color: rgba(21, 21, 21, 0.250);
+    background-color: rgba(21, 21, 21, .50);
     padding-top: 3.5em;
     padding-bottom: 3.5em;
     margin-top: 1.5em;
@@ -191,7 +193,9 @@ span {
 }
 
 img {
-    border-radius: 0.25em;
+    border-radius: 0.35em;
+    margin-top: -2em;
+    margin-bottom: 4em;
 }
 
 #right-lower-section-container {
@@ -200,14 +204,14 @@ img {
 }
 
 #object-name {
-    font-size: 2.5em;
-    margin-top: 1.5em;
-    margin-bottom: 1.0em;
+    font-size: 2.8vw;
+    margin-bottom: 1.7em; 
+    line-height: 1;
 }
 
 #infomration-card-container {
-    background-color: rgba(21, 21, 21, 0.150);
-    border-radius: 2em;
+    background-color: rgba(21, 21, 21, 0.50);
+    border-radius: 0.35em;
     margin-left: 0.5em;
     margin-right: 0.5em;
     padding: 0em;
@@ -234,17 +238,17 @@ img {
     margin: 0;
     padding-top: 1em;
     padding-bottom: 1em;
-    border-radius: 0 0 2em 2em;
-    background-color: rgba(21, 21, 21, 0.150);
+    border-radius: 0 0 0.35em 0.35em;
+    background-color: rgba(21, 21, 21, 0.6);
 }
 
 .quick-fact {
-    background-color: rgba(21, 21, 21, 0.200);
+    background-color: rgba(21, 21, 21, 0.65);
     margin: 0.3em;
     width: 7.2vw;
     height: 11vh;
     text-align: center;
-    border-radius: 0.5em;
+    border-radius: 0.35em;
     display: flex;
     flex-direction: column;
     justify-content: center;
