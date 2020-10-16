@@ -188,7 +188,7 @@ span {
     width: 100%;
     /* position: fixed; */
     max-width: 500px;
-    padding: 90px 45px 90px 90px;
+    padding: 90px 90px 90px 45px;
     overflow: scroll;
 }
 
@@ -196,6 +196,8 @@ img {
     border-radius: 0.35em;
     margin-top: -2em;
     margin-bottom: 4em;
+    width: 100%;
+    /* max-width: 341px; */
 }
 
 #right-lower-section-container {
