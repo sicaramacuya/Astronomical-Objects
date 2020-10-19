@@ -1,8 +1,10 @@
 const planets = [{
-    "id": 0,
+    "id": "solar-system",
     "name": "Solar System",
     "image": "./resources/images/solar_system.jpg",
-    "desc": " There are many planetary systems like ours in the universe, with planets orbiting a host star. Our planetary system is named the 'solar' system because our Sun is named Sol, after the Latin word for Sun, 'solis,' and anything related to the Sun we call 'solar.' Our planetary system is located in an outer spiral arm of the Milky Way galaxy. Our solar system consists of our star, the Sun, and everything bound to it by gravity — the planets Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune, dwarf planets such as Pluto, dozens of moons and millions of asteroids, comets and meteoroids. Beyond our own solar system, we have discovered thousands of planetary systems orbiting other stars in the Milky Way.",
+    "desc1": " There are many planetary systems like ours in the universe, with planets orbiting a host star. Our planetary system is named the 'solar' system because our Sun is named Sol, after the Latin word for Sun, 'solis,' and anything related to the Sun we call 'solar.'",
+    "desc2": "Our planetary system is located in an outer spiral arm of the Milky Way galaxy.",
+    "desc3": " Our solar system consists of our star, the Sun, and everything bound to it by gravity — the planets Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune, dwarf planets such as Pluto, dozens of moons and millions of asteroids, comets and meteoroids. Beyond our own solar system, we have discovered thousands of planetary systems orbiting other stars in the Milky Way.",
     "obrit_distance": "7.6 to 8.2 kiloparsec",
     "radius": "50,000 Astronomical Units",
     "volume": "Unknown",
@@ -20,10 +22,12 @@ const planets = [{
     "moons": "200+",
     "rings": "N/A"
 }, {
-    "id": 1,
+    "id": "sun",
     "name": "Sun",
     "image": "./resources/images/sun.jpg",
-    "desc": "The Sun is a yellow dwarf star, a hot ball of glowing gases at the heart of our solar system. Its gravity holds the solar system together, keeping everything – from the biggest planets to the smallest particles of debris – in its orbit. The connection and interactions between the Sun and Earth drive the seasons, ocean currents, weather, climate, radiation belts and auroras. Though it is special to us, there are billions of stars like our Sun scattered across the Milky Way galaxy. The Sun has many names in many cultures. The Latin word for Sun is 'sol,' which is the main adjective for all things Sun-related: solar.",
+    "desc1": "The Sun is a yellow dwarf star, a hot ball of glowing gases at the heart of our solar system.",
+    "desc2": "Its gravity holds the solar system together, keeping everything from the biggest planets to the smallest particles of debris in its orbit. Electric currents in the Sun generate a magnetic field that is carried out through the solar system by the solar wind—a stream of electrically charged gas blowing outward from the Sun in all directions.",
+    "desc3": "The connection and interactions between the Sun and Earth drive the seasons, ocean currents, weather, climate, radiation belts and aurorae. Though it is special to us, there are billions of stars like our Sun scattered across the Milky Way galaxy.",
     "obrit_distance": "N/A",
     "radius": "695,500 km",
     "volume": "1.409 x 10^18 km^3",
@@ -41,10 +45,12 @@ const planets = [{
     "moons": "N/A",
     "rings": "N/A"
 }, {
-    "id": 2,
+    "id": "mercury",
     "name": "Mercury",
     "image": "./resources/images/mercury.jpg",
-    "desc": "The smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than Earth's Moon. From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed from Earth, and the sunlight would be as much as seven times brighter. Despite its proximity to the Sun, Mercury is not the hottest planet in our solar system – that title belongs to nearby Venus, thanks to its dense atmosphere.",
+    "desc1": "The smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than Earth's Moon.",
+    "desc2": "From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed from Earth, and the sunlight would be as much as seven times brighter. Despite its proximity to the Sun, Mercury is not the hottest planet in our solar system – that title belongs to nearby Venus, thanks to its dense atmosphere.",
+    "desc3": "Because of Mercury's elliptical—egg-shaped—orbit and sluggish rotation, the morning Sun appears to rise briefly, set and rise again from some parts of the planet's surface. The same thing happens in reverse at sunset.",
     "obrit_distance": "5.790 x 10^7 km",
     "radius": "2.439 x 10^3 km",
     "volume": "6.082 x 10^10 km^3",
@@ -62,10 +68,12 @@ const planets = [{
     "moons": "0",
     "rings": "No"
 }, {
-    "id": 3,
+    "id": "venus",
     "name": "Venus",
     "image": "./resources/images/venus.jpg",
-    "desc": "Similar in size and structure to Earth, Venus has been called Earth's twin. These are not identical twins, however – there are radical differences between the two worlds. Venus has a thick, toxic atmosphere filled with carbon dioxide and it’s perpetually shrouded in thick, yellowish clouds of mostly sulfuric acid that trap heat, causing a runaway greenhouse effect. It’s the hottest planet in our solar system, even though Mercury is closer to the Sun. Venus has crushing air pressure at its surface – more than 90 times that of Earth – similar to the pressure you'd encounter a mile below the ocean on Earth. Venus was the first planet to be explored by a spacecraft – NASA’s Mariner 2 successfully flew by and scanned the cloud-covered world on Dec. 14, 1962. Since then, numerous spacecraft from the U.S. and other space agencies have explored Venus, including NASA’s Magellan, which mapped the planet's surface with radar. The former Soviet Union is the only nation to land on the surface of Venus to date, though the spacecraft did not survive long in the harsh environment.",
+    "desc1": "Similar in size and structure to Earth, Venus has been called Earth's twin. These are not identical twins, however – there are radical differences between the two worlds.",
+    "desc2": "Venus has a thick, toxic atmosphere filled with carbon dioxide and it’s perpetually shrouded in thick, yellowish clouds of mostly sulfuric acid that trap heat, causing a runaway greenhouse effect. It’s the hottest planet in our solar system, even though Mercury is closer to the Sun. Venus has crushing air pressure at its surface – more than 90 times that of Earth – similar to the pressure you'd encounter a mile below the ocean on Earth.",
+    "desc3": "Venus was the first planet to be explored by a spacecraft – NASA’s Mariner 2 successfully flew by and scanned the cloud-covered world on Dec. 14, 1962. Since then, numerous spacecraft from the U.S. and other space agencies have explored Venus, including NASA’s Magellan, which mapped the planet's surface with radar. The former Soviet Union is the only nation to land on the surface of Venus to date, though the spacecraft did not survive long in the harsh environment.",
     "obrit_distance": "1.082 x 10^8 km",
     "radius": "6.051 km",
     "volume": "9.284 x 10^11",
@@ -83,10 +91,12 @@ const planets = [{
     "moons": "0",
     "rings": "No"
 }, {
-    "id": 4,
+    "id": "earth",
     "name": "Earth",
     "image": "./resources/images/earth.jpg",
-    "desc": "Our home planet is the third planet from the Sun, and the only place we know of so far that’s inhabited by living things. While Earth is only the fifth largest planet in the solar system, it is the only world in our solar system with liquid water on the surface. Just slightly larger than nearby Venus, Earth is the biggest of the four planets closest to the Sun, all of which are made of rock and metal. The name Earth is at least 1,000 years old. All of the planets, except for Earth, were named after Greek and Roman gods and goddesses. However, the name Earth is a Germanic word, which simply means 'the ground.'",
+    "desc1": "Our home planet is the third planet from the Sun, and the only place we know of so far that’s inhabited by living things.",
+    "desc2": "While Earth is only the fifth largest planet in the solar system, it is the only world in our solar system with liquid water on the surface. Just slightly larger than nearby Venus, Earth is the biggest of the four planets closest to the Sun, all of which are made of rock and metal.",
+    "desc3": "The name Earth is at least 1,000 years old. All of the planets, except for Earth, were named after Greek and Roman gods and goddesses. However, the name Earth is a Germanic word, which simply means 'the ground.'",
     "obrit_distance": "1.496 x 10^8 km",
     "radius": "6.371 x 10^3 km",
     "volume": "1.083 x 10^12 km^3",
@@ -104,10 +114,12 @@ const planets = [{
     "moons": "1",
     "rings": "No"
 }, {
-    "id": 5,
+    "id": "mars",
     "name": "Mars",
     "image": "./resources/images/mars.jpg",
-    "desc": "The fourth planet from the Sun, Mars is a dusty, cold, desert world with a very thin atmosphere. This dynamic planet has seasons, polar ice caps, canyons, extinct volcanoes, and evidence that it was even more active in the past. Mars is one of the most explored bodies in our solar system, and it's the only planet where we've sent rovers to roam the alien landscape. NASA currently has three spacecraft in orbit, and it has one rover and one lander on the surface. NASA launched the next-generation Perseverance rover to Mars on July 30, 2020. India and ESA have spacecraft in orbit above Mars. These robotic explorers have found lots of evidence that Mars was much wetter and warmer, with a thicker atmosphere, billions of years ago.",
+    "desc1": "The fourth planet from the Sun, Mars is a dusty, cold, desert world with a very thin atmosphere.",
+    "desc2": "This dynamic planet has seasons, polar ice caps, canyons, extinct volcanoes, and evidence that it was even more active in the past.",
+    "desc3": "Mars is one of the most explored bodies in our solar system, and it's the only planet where we've sent rovers to roam the alien landscape. NASA currently has three spacecraft in orbit, and it has one rover and one lander on the surface. NASA launched the next-generation Perseverance rover to Mars on July 30, 2020. India and ESA have spacecraft in orbit above Mars. These robotic explorers have found lots of evidence that Mars was much wetter and warmer, with a thicker atmosphere, billions of years ago.",
     "obrit_distance": "2.279 x 10^8 km",
     "radius": "3.389 x 10^3 km",
     "volume": "1.631 x 10^11 km^3 ",
@@ -125,10 +137,12 @@ const planets = [{
     "moons": "2",
     "rings": "No"
 }, {
-    "id": 6,
+    "id": "jupiter",
     "name": "Jupiter",
     "image": "./resources/images/jupiter.jpg",
-    "desc": "Jupiter has a long history surprising scientists—all the way back to 1610 when Galileo Galilei found the first moons beyond Earth. That discovery changed the way we see the universe. Fifth in line from the Sun, Jupiter is, by far, the largest planet in the solar system – more than twice as massive as all the other planets combined. Jupiter's familiar stripes and swirls are actually cold, windy clouds of ammonia and water, floating in an atmosphere of hydrogen and helium. Jupiter’s iconic Great Red Spot is a giant storm bigger than Earth that has raged for hundreds of years.",
+    "desc1": "Jupiter has a long history surprising scientists—all the way back to 1610 when Galileo Galilei found the first moons beyond Earth. That discovery changed the way we see the universe.",
+    "desc2": "Fifth in line from the Sun, Jupiter is, by far, the largest planet in the solar system – more than twice as massive as all the other planets combined.",
+    "desc3": "Jupiter's familiar stripes and swirls are actually cold, windy clouds of ammonia and water, floating in an atmosphere of hydrogen and helium. Jupiter’s iconic Great Red Spot is a giant storm bigger than Earth that has raged for hundreds of years.",
     "obrit_distance": "7.783 x 10^8 km",
     "radius": "6.991 10^4 km",
     "volume": "1.431 x 10^15 km^3",
@@ -146,10 +160,12 @@ const planets = [{
     "moons": "79",
     "rings": "Yes"
 }, {
-    "id": 7,
+    "id": "saturn",
     "name": "Saturn",
     "image": "./resources/images/saturn.jpg",
-    "desc": "Saturn is the sixth planet from the Sun and the second largest planet in our solar system. Adorned with thousands of beautiful ringlets, Saturn is unique among the planets. It is not the only planet to have rings—made of chunks of ice and rock—but none are as spectacular or as complicated as Saturn's. Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.",
+    "desc1": "Saturn is the sixth planet from the Sun and the second largest planet in our solar system.",
+    "desc2": "Adorned with thousands of beautiful ringlets, Saturn is unique among the planets. It is not the only planet to have rings—made of chunks of ice and rock—but none are as spectacular or as complicated as Saturn's.",
+    "desc3": "Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.",
     "obrit_distance": "1.426 x 10^9 km",
     "radius": "5.823 x 10^4 km",
     "volume": "8.271 x 10^14 km^3",
@@ -167,10 +183,12 @@ const planets = [{
     "moons": "83",
     "rings": "Yes"
 }, {
-    "id": 8,
+    "id": "uranus",
     "name": "Uranus",
     "image": "./resources/images/uranus.jpg",
-    "desc": "The first planet found with the aid of a telescope, Uranus was discovered in 1781 by astronomer William Herschel, although he originally thought it was either a comet or a star. It was two years later that the object was universally accepted as a new planet, in part because of observations by astronomer Johann Elert Bode. Herschel tried unsuccessfully to name his discovery Georgium Sidus after King George III. Instead the scientific community accepted Bode's suggestion to name it Uranus, the Greek god of the sky, as suggested by Bode.​",
+    "desc1": "The first planet found with the aid of a telescope, Uranus was discovered in 1781 by astronomer William Herschel, although he originally thought it was either a comet or a star.",
+    "desc2": "It was two years later that the object was universally accepted as a new planet, in part because of observations by astronomer Johann Elert Bode. Herschel tried unsuccessfully to name his discovery Georgium Sidus after King George III. Instead the scientific community accepted Bode's suggestion to name it Uranus, the Greek god of the sky, as suggested by Bode.​",
+    "desc3": "Uranus' unique sideways rotation makes for weird seasons. The planet's north pole experiences 21 years of nighttime in winter, 21 years of daytime in summer and 42 years of day and night in the spring and fall.",
     "obrit_distance": "2.870 x 10^9 km",
     "radius": "2.536 x 10^4 km",
     "volume": "6.833 x 10^13 km^3",
@@ -189,10 +207,12 @@ const planets = [{
     "rings": "yes"
 
 }, {
-    "id": 9,
+    "id": "neptune",
     "name": "Neptune",
     "image": "./resources/images/neptune.jpg",
-    "desc": "Dark, cold and whipped by supersonic winds, ice giant Neptune is the eighth and most distant planet in our solar system. More than 30 times as far from the Sun as Earth, Neptune is the only planet in our solar system not visible to the naked eye and the first predicted by mathematics before its discovery. In 2011 Neptune completed its first 165-year orbit since its discovery in 1846. NASA's Voyager 2 is the only spacecraft to have visited Neptune up close. It flew past in 1989 on its way out of the solar system.",
+    "desc1": "Dark, cold and whipped by supersonic winds, ice giant Neptune is the eighth and most distant planet in our solar system.",
+    "desc2": "More than 30 times as far from the Sun as Earth, Neptune is the only planet in our solar system not visible to the naked eye and the first predicted by mathematics before its discovery. In 2011 Neptune completed its first 165-year orbit since its discovery in 1846.",
+    "desc3": "NASA's Voyager 2 is the only spacecraft to have visited Neptune up close. It flew past in 1989 on its way out of the solar system.",
     "obrit_distance": "4.498 x 10^9 km",
     "radius": "2.462 x 10^4 km",
     "volume": "6.252 x 10^13 km^3",
@@ -210,3 +230,5 @@ const planets = [{
     "moons": "14",
     "rings": "Yes"
 }]
+
+export default planets
