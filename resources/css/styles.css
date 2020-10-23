@@ -92,7 +92,7 @@ a {
 }
 
 .inner-outer-link:hover {
-=    letter-spacing: 0.1em;
+    letter-spacing: 0.1em;
     transition: all .35s ease-in-out;
 }
 
