@@ -10,13 +10,20 @@
         <div id="gigantic-container">
             <div id="left-section-container">
                 <div id="left-section-upper-container">
-                    <h1 id="solar-system-text">Solar System</h1>
+                    <a href="#solar-system">
+                        <h1 id="solar-system-text">Solar System</h1>
+                    </a>
                     <div id="solar-system-description-container">
-                        <p id="solar-system-description">The solar system is a gravitationally bound system. From the objects that orbit the Sun directly, there are two main categories: Inner Planets and Outer Planets. The four smaller inner planets, Mercury, Venus, Earth and Mars are terrestrial planets. In the outer planets there are the two largest planets, Jupiter and Saturn, gas giants, and the two outermost plantes Uranus and Neptune, which are ice giants.</p>
+                        <p id="solar-system-description">The solar system is a gravitationally bound system around the Sun. From the objects that orbit the Sun directly, there are two main categories: Inner Planets and Outer Planets. The four smaller inner planets, Mercury, Venus, Earth and Mars are terrestrial planets. In the outer planets there are the two largest planets, Jupiter and Saturn, gas giants, and the two outermost plantes Uranus and Neptune, which are ice giants.</p>
                     </div>
                 </div>
                 <nav id="inner-outer-navigator">
                     <ul id="inner-outer-ul">
+                        <li id="inner-link" class="inner-outer-li">
+                            <a href="#yellow-dwarf" class="inner-outer-link">
+                                <span id="inner-solar-system-text">Yellow dwarf</span>
+                            </a>
+                        </li>
                         <li id="inner-link" class="inner-outer-li">
                             <a href="#inner-planets-title-container" class="inner-outer-link">
                                 <span id="inner-solar-system-text">Inner Solar System</span>
@@ -34,11 +41,21 @@
 
             <div id="middle-section-container">
                 <div id="middle-section-planets-workspace">
-                    <div id="inner-planets-title-container">
-                        <h2>Inner System</h2>
+                    <div class="middle-section-title-container" id="yellow-dwarf">
+                        <h2>Yellow Dward</h2>
+                    </div>
+                    <div id="inner-planets-clip-board" class="planets-clipboard">
+                        <a class="article-link-selection" href="#sun">
+                            <div class="inner-planet planet">
+                                <h3>Sun</h3>
+                            </div>
+                        </a>
                     </div>
 
-                    <div id="inner-planets-clip-board">
+                    <div class="middle-section-title-container" id="inner-planets-title-container">
+                        <h2>Inner System</h2>
+                    </div>
+                    <div class="planets-clipboard">
                         <a class="article-link-selection" href="#mercury">
                             <div class="inner-planet planet">
                                 <h3>Mercury</h3>
@@ -61,10 +78,10 @@
                          </a> 
                     </div>
 
-                    <div id="outer-planets-title-container">
+                    <div class="middle-section-title-container" id="outer-planets-title-container">
                         <h2>Outer System</h2>
                     </div>
-                    <div id="outer-planets-clip-board">
+                    <div class="planets-clipboard">
                          <a class="article-link-selection" href="#jupiter">
                              <div class="outer-planet planet">
                                  <h3>Jupiter</h3>

@@ -127,26 +127,24 @@ span {
     box-sizing: border-box;
 }
 
-#inner-planets-title-container {
+.middle-section-title-container {
     padding-top: 12vh;
     padding-bottom: 0.35em;
     font-size: 2.2vw;
     line-height: 1;
 }
 
-#inner-planets-clip-board {
+/* #inner-planets-clip-board {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
 
-#outer-planets-title-container {
-    padding-top: 3.1em;
-    padding-bottom: 0.35em;
-    font-size: 2.2vw;
-    line-height: 1;
-}
-
 #outer-planets-clip-board {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+} */
+
+.planets-clip-board {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
