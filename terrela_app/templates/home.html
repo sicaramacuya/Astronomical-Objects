@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Solar System</title>
-        <link rel="stylesheet" href="./resources/css/styles.css">
+        <link rel="stylesheet" href="{{url_for('static',filename = 'css/styles.css')}}">
         <link rel="shortcut icon" type="image/png" href="./resources/images/favicons.png">
 
     </head>
@@ -116,7 +116,7 @@
             <!-- <div id="middle-upper-section"></div> -->
         </div>
 
-        <script src="./resources/js/scripts.js" type="module">
+        <script src="{{url_for('static',filename = 'js/scripts.js')}}" type="module">
         </script>
     </body>
 </html>
