@@ -2,8 +2,8 @@
 from flask import Blueprint, request, render_template, redirect, url_for, flash
 from flask_login import login_user, logout_user, login_required, current_user
 from datetime import date, datetime
-from terrela_app.models import User
-# from terrela_app.main.forms import BookForm, AuthorForm, GenreForm
+from terrela_app.models import User, Missions, Rockets, AstronomicalObjects
+from terrela_app.main.forms import MissionForm, RocketsForm, AstronomicalObjectsForm
 from terrela_app import bcrypt
 
 # Import app and db from events_app package so that we can run app
@@ -15,126 +15,78 @@ main = Blueprint("main", __name__)
 #           Routes                       #
 ##########################################
 
-@main.route('/')
+@main.route('/',  methods=['GET', 'POST'])
 def homepage():
+    all_missions = Missions.query.all()
+    all_rockets = Rockets.query.all()
+    all_objects = AstronomicalObjects.query.all()
+    print(f'Missions: {all_missions}')
+    print(f'Rockets: {all_rockets}')
+    print(f'Objects: {all_objects}')
+
     return render_template('home.html')
 
+@main.route('/create_mission', methods=['GET', 'POST'])
+def create_mission():
+    form = MissionForm()
 
-# @main.route('/create_book', methods=['GET', 'POST'])
-# @login_required
-# def create_book():
-#     form = BookForm()
+    if form.validate_on_submit():     # Debes verificar rocket_id
+        new_mission = Missions(
+            title=form.title.data,
+            date=form.date.data,
+            description=form.description.data
+        )
+        db.session.add(new_mission)
+        db.session.commit()
 
-#     # if form was submitted and contained no errors
-#     if form.validate_on_submit(): 
-#         new_book = Book(
-#             title=form.title.data,
-#             publish_date=form.publish_date.data,
-#             author=form.author.data,
-#             audience=form.audience.data,
-#             genres=form.genres.data
-#         )
-#         db.session.add(new_book)
-#         db.session.commit()
+        flash('New mission was created successfully.')
+        return redirect(url_for('main.mission_detail'))
+    return render_template('create_mission.html', form=form)
 
-#         flash('New book was created successfully.')
-#         return redirect(url_for('main.book_detail', book_id=new_book.id))
-#     return render_template('create_book.html', form=form)
+@main.route('/mission_details', methods=['GET', 'POST'])
+def mission_detail():
 
+    return render_template('mission_detail.html')
 
-# @main.route('/create_author', methods=['GET', 'POST'])
-# def create_author():
-#     # TODO: Make an AuthorForm instance
+@main.route('/create_object', methods=['GET', 'POST'])
+def create_object():
+    form = AstronomicalObjectsForm()
 
-#     # TODO: If the form was submitted and is valid, create a new Author object
-#     # and save to the database, then flash a success message to the user and
-#     # redirect to the homepage
+    if form.validate_on_submit():
+        new_object = AstronomicalObjects(
+            name=form.name.data,
+            category=form.category.data,
+            description=form.description.data
+        )
+        db.session.add(new_object)
+        db.session.commit()
 
-#     # TODO: Send the form object to the template, and use it to render the form
-#     # fields
-#     return render_template('create_author.html')
+        flash('New object was created successfully.')
+        return redirect(url_for('main.object_details', object_id=new_object.id))
+    return render_template('create_object.html', form=form)
 
+@main.route('/object_details/<object_id>', methods=['GET', 'POST'])
+def object_details(object_id):
+    astronomical_object = AstronomicalObjects.query.get(object_id)
+    form = AstronomicalObjectsForm(obj=astronomical_object)
 
-# @main.route('/create_genre', methods=['GET', 'POST'])
-# def create_genre():
-#     # TODO: Make a GenreForm instance
+    if form.validate_on_submit():
+        astronomical_object.name = form.name.data,
+        astronomical_object.category = form.category.data,
+        astronomical_object.description = form.description.data
 
-#     # TODO: If the form was submitted and is valid, create a new Genre object
-#     # and save to the database, then flash a success message to the user and
-#     # redirect to the homepage
+        db.session.add(astronomical_object)
+        db.session.commit()
 
-#     # TODO: Send the form object to the template, and use it to render the form
-#     # fields
-#     return render_template('create_genre.html')
+        flash('Object was edited successfully')
+        return redirect(url_for('main.object_detail', object_id=astronomical_object.id))
 
+    return render_template('object_detail.html', object=astronomical_object, form=form)
 
-# @main.route('/book/<book_id>', methods=['GET', 'POST'])
-# def book_detail(book_id):
-#     book = Book.query.get(book_id)
-#     form = BookForm(obj=book)
+@main.route('/create_rocket', methods=['GET', 'POST'])
+def create_rocket():
+    return render_template('create_rocket.html')
 
-#     # TODO: If the form was submitted and is valid, update the fields in the 
-#     # Book object and save to the database, then flash a success message to the 
-#     # user and redirect to the book detail page
-
-#     is_book_a_favorite = bool
-#     current_user_id = current_user.get_id()
-#     user_object = User.query.filter_by(id=current_user_id).one()
-
-#     if book in user_object.favorite_books:
-#         is_book_a_favorite = True
-#     else:
-#         is_book_a_favorite = False
-
-#     return render_template('book_detail.html', book=book, form=form, is_book_a_favorite=is_book_a_favorite)
-
-
-# @main.route('/profile/<username>')
-# def profile(username):
-#     # TODO: Make a query for the user with the given username, and send to the
-#     # template
-
-#     # STRETCH CHALLENGE: Add ability to modify a user's username or favorite 
-#     # books
-#     return render_template('profile.html', username=username)
-
-
-# # TODO: Add `@login_required`
-# @login_required
-# @main.route('/favorite/<book_id>', methods=['POST'])
-# def favorite_book(book_id):
-#     book = Book.query.get(book_id)
-#     # TODO: If the book is not already in user's favorites, then add it,
-#     # commit the change to the database, and flash a success message.
-    
-#     current_user_id = current_user.get_id()
-#     user_object = User.query.filter_by(id=current_user_id).one()
-
-#     if not book in user_object.favorite_books:
-#         user_object.favorite_books.append(book)
-
-#         db.session.add(user_object)
-#         db.session.commit()
-
-#     # Then, redirect the user to the book detail page for the given book.
-#     return redirect(url_for('main.book_detail', book_id=book.id))
-
-
-# # TODO: Add `@login_required`
-# @login_required
-# @main.route('/unfavorite/<book_id>', methods=['POST'])
-# def unfavorite_book(book_id):
-#     book = Book.query.get(book_id)
-#     # TODO: If the book is in user's favorites, then remove it,
-#     # commit the change to the database, and flash a success message.
-#     current_user_id = current_user.get_id()
-#     user_object = User.query.filter_by(id=current_user_id).one()
-
-#     if book in user_object.favorite_books:
-#         user_object.favorite_books.remove(book)
-
-#         db.session.add(user_object)
-#         db.session.commit()
-
-#     # Then, redirect the user to the book detail page for the given book.
-#     return redirect(url_for('main.book_detail', book_id=book.id))
+@main.route('/example', methods=['GET', 'POST'])
+def base():
+    return render_template('example.html')

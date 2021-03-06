@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="POST" action="{{ url_for('main.create_mission') }}">
+    {{ form.csrf_token }}
+    <fieldset>
+        <legend>Add a rocket</legend>
+
+        {{ form.name.label }}
+        {{ form.name }}
+        <ul>
+        {% for error in form.name.errors %}
+            <li class="error">{{ error }}</li>
+        {% endfor %}
+        </ul>
+        
+        {{ form.category.label }}
+        {{ form.category }}
+        <ul>
+        {% for error in form.category.errors %}
+            <li class="error">{{ error }}</li>
+        {% endfor %}
+        </ul>
+        
+        {{ form.description.label }}
+        {{ form.description }}
+            
+        {{ form.submit }}
+    </fieldset>
+</form>
+
+{% endblock %}

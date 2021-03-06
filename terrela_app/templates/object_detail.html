@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Astronomical Object - {{ object.name }}</h1>
+
+<p><strong>Category:</strong> {{ object.category }}</p>
+
+<p><strong>Description:</strong> {{ object.description }}</p><br><br><br>
+
+
+<h2>Edit Store</h2><br>
+
+<form method="POST" action="{{ url_for('main.object_details', object_id=object.id) }}">
+    {{ form.csrf_token }}
+    <fieldset>
+        <div class="mb-3">
+            <div class="container">{{ form.name.label }}</div>
+            <div class="container">{{ form.name }}</div>
+            <ul>
+                {% for error in form.name.errors %}
+                <li class="error">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="mb-3">
+            <div class="container">{{ form.category.label }}</div>
+            <div class="container">{{ form.category }}</div>
+            <ul>
+                {% for error in form.category.errors %}
+                <li class="error">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="mb-3">
+            <div class="container">{{ form.description.label }}</div>
+            <div class="container">{{ form.description }}</div>
+            <ul>
+                {% for error in form.description.errors %}
+                <li class="error">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="container">{{ form.submit }}</div>
+    </fieldset>
+</form>
+
+{% endblock %}

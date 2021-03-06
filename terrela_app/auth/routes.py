@@ -13,6 +13,7 @@ auth = Blueprint("auth", __name__)
 @auth.route('/signup', methods=['GET', 'POST'])
 def signup():
     form = SignUpForm()
+    print(form.validate_on_submit())
     if form.validate_on_submit():
         hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
         user = User(

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Solar System</title>
+        <link rel="stylesheet" href="{{url_for('static',filename = 'css/styles.css')}}">
+        <link rel="shortcut icon" type="image/png" href="./resources/images/favicons.png">
+
+    </head>
+    <body>
+        <div id="gigantic-container">
+            <div id="left-section-container">
+                <div id="left-section-upper-container">
+                    <a href="#solar-system">
+                        <h1 id="solar-system-text">Solar System</h1>
+                    </a>
+                    <div id="solar-system-description-container">
+                        <p id="solar-system-description">The solar system is a gravitationally bound system around the Sun. From the objects that orbit the Sun directly, there are two main categories: Inner Planets and Outer Planets. The four smaller inner planets, Mercury, Venus, Earth and Mars are terrestrial planets. In the outer planets there are the two largest planets, Jupiter and Saturn, gas giants, and the two outermost plantes Uranus and Neptune, which are ice giants.</p>
+                    </div>
+                </div>
+                <nav id="inner-outer-navigator">
+                    <ul id="inner-outer-ul">
+                        <li id="inner-link" class="inner-outer-li">
+                            <a href="#yellow-dwarf" class="inner-outer-link">
+                                <span id="inner-solar-system-text">Yellow dwarf</span>
+                            </a>
+                        </li>
+                        <li id="inner-link" class="inner-outer-li">
+                            <a href="#inner-planets-title-container" class="inner-outer-link">
+                                <span id="inner-solar-system-text">Inner Solar System</span>
+                            </a>
+                        </li>
+                        <li id="outer-link" class="inner-outer-li">
+                            <a href="#outer-planets-title-container" class="inner-outer-link">
+                                <span id="outer-solar-system-text">Outer Solar System</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <div id="middle-section-container">
+                <div id="middle-section-planets-workspace">
+                    <div class="middle-section-title-container" id="yellow-dwarf">
+                        <h2>Yellow Dwarf</h2>
+                    </div>
+                    <div id="inner-planets-clip-board" class="planets-clipboard">
+                        <a class="article-link-selection" href="#sun">
+                            <div class="inner-planet planet sund-card">
+                                <h3>Sun</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="middle-section-title-container" id="inner-planets-title-container">
+                        <h2>Inner System</h2>
+                    </div>
+                    <div class="planets-clipboard">
+                        <a class="article-link-selection" href="#mercury">
+                            <div class="inner-planet planet" id="mercury-card">
+                                <h3>Mercury</h3>
+                            </div>
+                        </a>
+                        <a class="article-link-selection" href="#venus">
+                            <div class="inner-planet planet" id="venus-card">
+                                <h3>Venus</h3>
+                            </div>
+                        </a>                        
+                        <a class="article-link-selection" href="#earth">
+                            <div class="inner-planet planet" id="earth-card">
+                                <h3>Earth</h3>
+                            </div>
+                        </a>
+                        <a class="article-link-selection" href="#mars">
+                             <div class="inner-planet planet" id="mars-card">
+                                 <h3>Mars</h3>
+                             </div>
+                         </a> 
+                    </div>
+
+                    <div class="middle-section-title-container" id="outer-planets-title-container">
+                        <h2>Outer System</h2>
+                    </div>
+                    <div class="planets-clipboard">
+                         <a class="article-link-selection" href="#jupiter">
+                             <div class="outer-planet planet" id="jupiter-card">
+                                 <h3>Jupiter</h3>
+                           </div>
+                        </a>
+                        <a class="article-link-selection" href="#saturn">
+                            <div class="outer-planet planet" id="saturn-card">
+                                <h3>Saturn</h3>
+                            </div>
+                        </a>
+                         <a class="article-link-selection" href="#uranus">
+                            <div class="outer-planet planet" id="uranus-card">
+                                <h3>Uranus</h3>
+                            </div>
+                        </a>
+                         <a class="article-link-selection" href="#neptune">
+                            <div class="outer-planet planet" id="neptune-card">
+                                <h3>Neptune</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <main id="right-section-container">
+                    <!-- Each Article will go here -->
+            </main> 
+
+            <!-- If you are going to have the middle part to be scrollable complete the bottom section and upper section div to make the text desapear gradually. -->
+            <!-- <div id="middle-bottom-section"></div> -->
+            <!-- <div id="middle-upper-section"></div> -->
+        </div>
+
+        <script src="{{url_for('static',filename = 'js/scripts.js')}}" type="module">
+        </script>
+    </body>
+</html>

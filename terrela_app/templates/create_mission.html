@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container p-5">
+    <p class="fs-1">Add a mission</p>
+</div>
+<div class="container p-5 ">
+    <div class="row p-5">
+        <div class="col offset-4">
+            <form class="p-4" method="POST" action="{{ url_for('main.create_mission') }}">
+                {{ form.csrf_token }}
+                <div class="mb-3">
+                    <div class="container">{{ form.title.label }}</div>
+                    <div class="container">{{ form.title }}</div>
+                    <ul>
+                        {% for error in form.title.errors %}
+                        <li class="error">{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="mb-3">
+                    <div class="container">{{ form.date.label }}</div>
+                    <div class="container">{{ form.date }}</div>
+                    <ul>
+                        {% for error in form.date.errors %}
+                        <li class="error">{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="mb-3">
+                    <div class="container">{{ form.rocket_id.label }}</div>
+                    <div class="container">{{ form.rocket_id }}</div>
+                    <ul>
+                        {% for error in form.rocket_id.errors %}
+                        <li class="error">{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="mb-3">
+                    <div class="container">{{ form.description.label }}</div>
+                    <div class="container">{{ form.description }}</div>
+                    <ul>
+                        {% for error in form.description.errors %}
+                            <li class="error">{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="container">{{ form.submit }}</div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -44,31 +44,31 @@ h1, h2, h3, h4, h5, h6, p, ul {
     flex-direction: column;
 }
 
-#solar-system-text {
+#solar-system-text, #title-text {
     font-weight: 700;
     font-size: 4vw;
     line-height: 1;
 }
 
-#solar-system-description-container {
+#solar-system-description-container, #title-description-container {
     line-height: 2;
 }
 
-#solar-system-description {
+#solar-system-description, #title-description {
     margin-top: 2em;
 }
 
-#inner-outer-navigator {
+#inner-outer-navigator, #category-navigator {
     font-weight: 700;
     font-size: 0.75em;
     margin-top: 10em;
-    margin-bottom: 28em;
+    margin-bottom: 12em;
     text-transform: uppercase;
     display: block;
     font-size: 1em;
 }
 
-#inner-outer-ul {
+#inner-outer-ul, #category-ul {
     list-style: none;
     padding: 0;
     display: flex;
@@ -77,12 +77,12 @@ h1, h2, h3, h4, h5, h6, p, ul {
     margin-bottom: -1em;
 }
 
-.inner-outer-li {
+.inner-outer-li, .category-li {
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-.inner-outer-link {
+.inner-outer-link, .category-link {
     width: 100%;
 }
 
@@ -101,9 +101,23 @@ span {
     height: 1.5em;
 }
 
+#ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: -16px;
+    margin-right: -16px;
+}
 
-
-
+li {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
 
 /* ------------------------------ EVERYTHING ON THE MIDDLE SIDE CONTAINER IS HERE ------------------------------ */
 
@@ -115,7 +129,7 @@ span {
     scroll-behavior: smooth;
 }
 
-#middle-section-planets-workspace {
+#middle-section-planets-workspace, #middle-section-workspace {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -130,12 +144,12 @@ span {
     line-height: 1;
 }
 
-.planets-clip-board {
+.planets-clip-board, .examples-clipboard {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
 
-.planet {
+.planet, .example {
     background-color: rgba(21, 21, 21, .50);
     padding-top: 3.5em;
     padding-bottom: 3.5em;
