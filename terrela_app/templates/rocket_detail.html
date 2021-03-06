@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Rocket - {{ rocket.name }}</h1>
+
+<p><strong>Description:</strong> {{ rocket.description }}</p><br><br><br>
+
+
+<h2>Edit Rocket</h2><br>
+
+<form method="POST" action="{{ url_for('main.rocket_details', rocket_id=rocket.id) }}">
+    {{ form.csrf_token }}
+    <fieldset>
+        <div class="mb-3">
+            <div class="container">{{ form.name.label }}</div>
+            <div class="container">{{ form.name }}</div>
+            <ul>
+                {% for error in form.name.errors %}
+                <li class="error">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="mb-3">
+            <div class="container">{{ form.description.label }}</div>
+            <div class="container">{{ form.description }}</div>
+            <ul>
+                {% for error in form.description.errors %}
+                <li class="error">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="container">{{ form.submit }}</div>
+    </fieldset>
+</form>
+
+{% endblock %}

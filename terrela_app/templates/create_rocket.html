@@ -2,32 +2,36 @@
 
 {% block content %}
 
-<form method="POST" action="{{ url_for('main.create_mission') }}">
-    {{ form.csrf_token }}
-    <fieldset>
-        <legend>Add a rocket</legend>
-
-        {{ form.name.label }}
-        {{ form.name }}
-        <ul>
-        {% for error in form.name.errors %}
-            <li class="error">{{ error }}</li>
-        {% endfor %}
-        </ul>
-        
-        {{ form.category.label }}
-        {{ form.category }}
-        <ul>
-        {% for error in form.category.errors %}
-            <li class="error">{{ error }}</li>
-        {% endfor %}
-        </ul>
-        
-        {{ form.description.label }}
-        {{ form.description }}
-            
-        {{ form.submit }}
-    </fieldset>
-</form>
+<div class="container p-5">
+    <p class="fs-1">Add rocket</p>
+</div>
+<div class="container p-5 ">
+    <div class="row p-5">
+        <div class="col offset-4">
+            <form class="p-4" method="POST" action="{{ url_for('main.create_rocket') }}">
+                {{ form.csrf_token }}
+                <div class="mb-3">
+                    <div class="container">{{ form.name.label }}</div>
+                    <div class="container">{{ form.name }}</div>
+                    <ul>
+                        {% for error in form.name.errors %}
+                        <li class="error">{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="mb-3">
+                    <div class="container">{{ form.description.label }}</div>
+                    <div class="container">{{ form.description }}</div>
+                    <ul>
+                        {% for error in form.description.errors %}
+                        <li class="error">{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="container">{{ form.submit }}</div>
+            </form>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

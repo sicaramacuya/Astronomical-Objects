@@ -26,11 +26,11 @@ def homepage():
 
     return render_template('home.html')
 
-@main.route('/create_mission', methods=['GET', 'POST'])
+@main.route('/create_mission', methods=['GET', 'POST']) # VERIFICAR ROCKET_ID!!!
 def create_mission():
     form = MissionForm()
 
-    if form.validate_on_submit():     # Debes verificar rocket_id
+    if form.validate_on_submit():
         new_mission = Missions(
             title=form.title.data,
             date=form.date.data,
@@ -85,7 +85,37 @@ def object_details(object_id):
 
 @main.route('/create_rocket', methods=['GET', 'POST'])
 def create_rocket():
-    return render_template('create_rocket.html')
+    form = RocketsForm()
+
+    if form.validate_on_submit():
+        new_rocket = Rockets(
+            name=form.name.data,
+            description=form.description.data,
+        )
+        db.session.add(new_rocket)
+        db.session.commit()
+
+        flash('New object was created successfully.')
+        return redirect(url_for('main.rocket_details', rocket_id=new_rocket.id))
+    return render_template('create_rocket.html', form=form)
+
+@main.route('/rocket_details/<rocket_id>', methods=['GET', 'POST'])
+def rocket_details(rocket_id):
+    rocket = Rockets.query.get(rocket_id)
+    form = RocketsForm(obj=rocket)
+
+    if form.validate_on_submit():
+        rocket.name = form.name.data,
+        rocket.description = form.description.data,
+        rocket.mission = form.mission.data
+
+        db.session.add(rocket)
+        db.session.commit()
+
+        flash('Object was edited successfully')
+        return redirect(url_for('main.rocket_detail', rocket_id=rocket.id))
+
+    return render_template('rocket_detail.html', rocket=rocket, form=form)
 
 @main.route('/example', methods=['GET', 'POST'])
 def base():
